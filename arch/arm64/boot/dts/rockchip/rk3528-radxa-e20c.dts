@@ -235,10 +235,15 @@
 	phy-supply = <&vcc_3v3>;
 	pinctrl-names = "default";
 	pinctrl-0 = <&rgmii_miim>, <&rgmii_tx_bus2>, <&rgmii_rx_bus2>,
-		    <&rgmii_rgmii_clk>, <&rgmii_rgmii_bus>;
+		    <&rgmii_rgmii_clk>, <&rgmii_rgmii_bus>, <&gmac1_rstn_l>;
 
 	tx_delay = <0x2e>;
 	rx_delay = <0x16>;
+
+	snps,reset-gpio = <&gpio4 RK_PC2 GPIO_ACTIVE_LOW>;
+	snps,reset-active-low;
+	/* Reset time is 20ms, 100ms for yt8531, also works well here */
+	snps,reset-delays-us = <0 20000 100000>;
 
 	status = "okay";
 };
@@ -299,12 +304,6 @@
 		motorcomm,led1-triggers = "activity";
 		/* LED2(Y): Link - 10/100/1000M */
 		motorcomm,led2-triggers = "link-10", "link-100", "link-1000";
-
-		pinctrl-names = "default";
-		pinctrl-0 = <&gmac1_rstn_l>;
-		reset-assert-us = <20000>;
-		reset-deassert-us = <100000>;
-		reset-gpios = <&gpio4 RK_PC2 GPIO_ACTIVE_LOW>;
 	};
 };
 
