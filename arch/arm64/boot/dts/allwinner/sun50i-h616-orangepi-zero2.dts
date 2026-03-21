@@ -24,10 +24,6 @@
 	phy-supply = <&reg_dcdce>;
 };
 
-&hdmi {
-	hvcc-supply = <&reg_bldo1>;
-};
-
 &mmc0 {
 	vmmc-supply = <&reg_dcdce>;
 };
