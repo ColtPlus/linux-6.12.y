@@ -16,6 +16,9 @@
 #include <linux/slab.h>
 #include <linux/random.h>
 
+int sunxi_get_soc_chipid(unsigned char *chipid);
+int sunxi_get_serial(unsigned char *serial);
+
 /* Registers and special values for doing register-based SID readout on H3 */
 #define SUN8I_SID_PRCTL		0x40
 #define SUN8I_SID_RDKEY		0x60
