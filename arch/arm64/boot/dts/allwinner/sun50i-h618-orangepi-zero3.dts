@@ -44,3 +44,8 @@
 	vcc-ph-supply = <&reg_dldo1>;
 	vcc-pi-supply = <&reg_dldo1>;
 };
+
+&gpu {
+	mali-supply = <&reg_dcdc1>;
+	status = "okay";
+};
