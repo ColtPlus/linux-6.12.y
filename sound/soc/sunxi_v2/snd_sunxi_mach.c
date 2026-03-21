@@ -43,8 +43,8 @@ static int asoc_simple_hw_params(struct snd_pcm_substream *substream,
 	struct snd_soc_dai *cpu_dai = snd_soc_rtd_to_cpu(rtd, 0);
 
 	struct asoc_simple_priv *priv = snd_soc_card_get_drvdata(rtd->card);
-	struct snd_soc_dai_link *dai_link = simple_priv_to_link(priv, rtd->num);
-	struct simple_dai_props *dai_props = simple_priv_to_props(priv, rtd->num);
+	struct snd_soc_dai_link *dai_link = simple_priv_to_link(priv, rtd->id);
+	struct simple_dai_props *dai_props = simple_priv_to_props(priv, rtd->id);
 	struct asoc_simple_dai *dais = priv->dais;
 	unsigned int mclk;
 	unsigned int cpu_pll_clk, codec_pll_clk;
