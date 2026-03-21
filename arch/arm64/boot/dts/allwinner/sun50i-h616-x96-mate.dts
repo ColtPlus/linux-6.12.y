@@ -224,8 +224,3 @@
 &usbphy {
 	status = "okay";
 };
-
-&gpu {
-	mali-supply = <&reg_dcdcc>;
-	status = "okay";
-};
