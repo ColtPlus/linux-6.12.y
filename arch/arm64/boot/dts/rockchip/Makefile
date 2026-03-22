@@ -172,6 +172,7 @@ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-nanopi-r3s.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-bigtreetech-cb2-manta.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-bigtreetech-pi2.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-jp-tvbox.dtb
+dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-x88pro20.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-panther-x2.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-wxy-oec-turbo-4g.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-tinker-board-3.dtb
