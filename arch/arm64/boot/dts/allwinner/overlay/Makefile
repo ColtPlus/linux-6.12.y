@@ -30,6 +30,7 @@ dtb-$(CONFIG_ARCH_SUNXI) += \
 	sun50i-h5-usbhost2.dtbo \
 	sun50i-h5-usbhost3.dtbo \
 	sun50i-h5-w1-gpio.dtbo \
+	sun50i-h616-emac0-rgmii-pi.dtbo \
 	sun50i-h616-gpu.dtbo \
 	sun50i-h616-i2c0-pi.dtbo \
 	sun50i-h616-i2c1-pi.dtbo \
