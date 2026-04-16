@@ -937,7 +937,8 @@
 
 			endpoint {
 				remote-endpoint = <0x158>;
-			data-lanes = <1 2 3 4>;
+				data-lanes = <1 2 3 4>;
+				phandle = <0x179>;
 			};
 		};*/
 	};
@@ -1097,9 +1098,9 @@
 	};
 };
 
-&csi2-dphy3 {
+/*&csi2-dphy3 {
 	compatible = "rockchip,rk3568-csi2-dphy";
-	rockchip,hw = <0x178>;
+	rockchip,hw = <&csi2-dphy1>;
 	status = "okay";
 
 	ports {
@@ -1131,7 +1132,7 @@
 			};
 		};
 	};
-};
+};*/
 
 &usb_host1_xhci {
 	dr_mode = "host";
@@ -1148,7 +1149,47 @@
 	status = "okay";
 };
 
-/*mipi4-csi2@fdd50000*/
+/*mipi4-csi2 {
+	compatible = "rockchip,rk3588-mipi-csi2";
+	reg = <0x00 0xfdd50000 0x00 0x10000>;
+	reg-names = "csihost_regs";
+	interrupts = <0x00 0x97 0x04 0x00 0x98 0x04>;
+	interrupt-names = "csi-intr1\0csi-intr2";
+	clocks = <0x02 0x1d3>;
+	clock-names = "pclk_csi2host";
+	resets = <0x02 0x328>;
+	reset-names = "srst_csihost_p";
+	status = "okay";
+
+	ports {
+		#address-cells = <0x01>;
+		#size-cells = <0x00>;
+
+		port@0 {
+			reg = <0x00>;
+			#address-cells = <0x01>;
+			#size-cells = <0x00>;
+
+			endpoint@1 {
+				reg = <0x01>;
+				remote-endpoint = <0x180>;
+				phandle = <0x17a>;
+			};
+		};
+
+		port@1 {
+			reg = <0x01>;
+			#address-cells = <0x01>;
+			#size-cells = <0x00>;
+
+			endpoint@0 {
+				reg = <0x00>;
+				remote-endpoint = <0x181>;
+				phandle = <0x17b>;
+			};
+		};
+	};
+};*/
 
 &spdif_tx5 {
 	status = "okay";
