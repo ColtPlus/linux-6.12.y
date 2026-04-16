@@ -20,8 +20,8 @@
 		#size-cells = <2>;
 		ranges;
 
-		my_reserved_region: memreserve@0a100000 {
-			reg = <0x00 0x0a100000 0x00 0x00028000>;
+		my_reserved_region: memreserve@a100000 {
+			reg = <0x0 0xa100000 0x0 0x28000>;
 			no-map;
 		};
 	};
