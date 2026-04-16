@@ -12,19 +12,18 @@
 #include "rk3588.dtsi"
 
 / {
-        reserved-memory {
-                #address-cells = <2>;
-                #size-cells = <2>;
-                ranges;
-
-                my_reserved_region: memreserve@0a100000 {
-                        reg = <0x00 0x0a100000 0x00 0x00028000>;
-                        no-map;
-                };
-        };
-/ {
 	model = "seewo sv50";
 	compatible = "seewo,sv50", "rockchip,rk3588";
+	reserved-memory {
+		#address-cells = <2>;
+		#size-cells = <2>;
+		ranges;
+
+		my_reserved_region: memreserve@0a100000 {
+			reg = <0x00 0x0a100000 0x00 0x00028000>;
+			no-map;
+		};
+	};
 
 	aliases {
 		mmc1 = &sdhci;
