@@ -1256,6 +1256,8 @@
 
 &combphy1_ps {
 	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&sata1_pm_reset>;
 };
 
 &pcie30phy {
