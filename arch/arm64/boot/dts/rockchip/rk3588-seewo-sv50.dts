@@ -366,7 +366,7 @@
 &vp3 {
 	vp3_out_dsi0: endpoint@ROCKCHIP_VOP2_EP_MIPI0 {
 		reg = <ROCKCHIP_VOP2_EP_MIPI0>;
-		remote-endpoint = <&si0_in_vp3>;
+		remote-endpoint = <&dsi0_in_vp3>;
 	};
 };
 
