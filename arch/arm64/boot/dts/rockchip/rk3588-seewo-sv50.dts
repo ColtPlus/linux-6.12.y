@@ -938,8 +938,8 @@
 			endpoint {
 				remote-endpoint = <0x158>;
 			data-lanes = <1 2 3 4>;
-			};*/
-		};
+			};
+		};*/
 	};
 
 	usbc0: et7304@4e {
