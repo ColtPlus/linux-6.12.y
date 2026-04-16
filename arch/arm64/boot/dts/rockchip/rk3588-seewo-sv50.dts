@@ -338,10 +338,10 @@
 		 <&cru DCLK_VOP2>,
 		 <&cru DCLK_VOP3>,
 		 <&cru PCLK_VOP_ROOT>,
-		 <&hdptxphy0>;
+		 <&hdptxphy0>,
 		 <&cru DCLK_VOP0_SRC>,
 		 <&cru DCLK_VOP1_SRC>,
-		 <&cru DCLK_VOP2_SRC>,
+		 <&cru DCLK_VOP2_SRC>;
 	clock-names = "aclk",
 		      "hclk",
 		      "dclk_vp0",
@@ -349,9 +349,9 @@
 		      "dclk_vp2",
 		      "dclk_vp3",
 		      "pclk_vop",
-		      "pll_hdmiphy0";
-		      "dclk_src_vp0";
-		      "dclk_src_vp1";
+		      "pll_hdmiphy0",
+		      "dclk_src_vp0",
+		      "dclk_src_vp1",
 		      "dclk_src_vp2";
 	resets = <&cru SRST_A_VOP>,<&cru SRST_H_VOP>,<&cru SRST_D_VOP0>,&cru SRST_D_VOP1>,<&cru SRST_D_VOP2>,<&cru SRST_D_VOP3>;
 	reset-names = "axi","ahb","dclk_vp0","dclk_vp1","dclk_vp2","dclk_vp3";
