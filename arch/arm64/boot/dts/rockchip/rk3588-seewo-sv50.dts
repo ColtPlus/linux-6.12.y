@@ -15,17 +15,6 @@
 	model = "seewo sv50";
 	compatible = "seewo,sv50", "rockchip,rk3588";
 
-	reserved-memory {
-		#address-cells = <2>;
-		#size-cells = <2>;
-		ranges;
-
-		my_reserved_region: memreserve@a100000 {
-			reg = <0x0 0xa100000 0x0 0x28000>;
-			no-map;
-		};
-	};
-
 	aliases {
 		mmc1 = &sdhci;
 	};
